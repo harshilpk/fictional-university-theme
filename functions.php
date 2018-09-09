@@ -80,4 +80,11 @@ function university_adjust_queries($query) {
 add_action('pre_get_posts', 'university_adjust_queries');
 
 
+function universityMapKey($api) {
+    $api['key'] = 'AIzaSyB4zfkFPdAwlE11WTPvl2qwn98tef8NgWI';
+    return $api;
+}
+
+add_filter('acf/fields/google_map/api', 'universityMapKey')
+
 ?>
