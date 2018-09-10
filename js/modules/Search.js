@@ -84,7 +84,7 @@ class Search {
                 this.resultsDiv.html(`
                 <h2 class="search-overlay__section-title">General Information</h2>
                     ${combinedResults.length ? '<ul class="link-list min-list">' : '<p>No general information matches your search</p>'}
-                        ${combinedResults.map((item) => `<li><a href="${item.link}">${item.title.rendered}</a></li>`).join('')}
+                        ${combinedResults.map((item) => `<li><a href="${item.link}">${item.title.rendered}</a> ${item.type == 'post' ? `by ${item.authorName}` : '' }</li>`).join('')}
                     ${combinedResults.length ? '</ul>' : ''}
                     </ul>
                 `);
